@@ -20,9 +20,9 @@ int p(int n)
 	d0=d1;
 	a0=a1;
 	m1=d0*a0-m0;
-        d1=(n-m1*m1)/d0;
-        a1=(s+m1)/d1;
-        cf+=1;
+    d1=(n-m1*m1)/d0;
+    a1=(s+m1)/d1;
+    cf+=1;
 	}
     return cf;
 }
@@ -36,18 +36,18 @@ float f(int d)
 int main()
 {
 	clock_t s=clock();
-	float M,m=0;
+	float M=0,m=0;
 	int D=101;
     for(int d=102;d<500000000;d++)
     {
 		if(d!=((int) sqrt(d))*((int) sqrt(d)))
 		{
-	    	M=p(d)/f(d);
-	    	if(M>m){m=M;D=d;}
+	    	m=p(d)/f(d);
+	    	if(m>M){M=m;D=d;}
 		}
-		if(d%1000000==0)printf("%d:%d,%f,%f\n",d,D,m,(clock()-s)*1.0/CLOCKS_PER_SEC);
+		if(d%1000000==0)printf("%d:%d,%f,%f\n",d,D,M,(clock()-s)*1.0/CLOCKS_PER_SEC);
     }
     printf("%d,%f\n",D,M);
-	printf("%f\n",(clock()-s)*1.0/CLOCKS_PER_SEC);
+    printf("%f\n",(clock()-s)*1.0/CLOCKS_PER_SEC);
     return 0;
 }
