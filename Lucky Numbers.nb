@@ -1,0 +1,5 @@
+L = Table[2*i + 1, {i, 0, 10^5}]; For[n = 2, n < Length[L], 
+ r = L[[n++]]; 
+ L = ReplacePart[L, 
+   Table[r*i -> Nothing, {i, 1, Length[L]/r}]]]; 
+   L[[1600]]
