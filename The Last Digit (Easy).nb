@@ -1,0 +1,1 @@
+Sum[Mod[NextPrime[10^n], 10], {n, 0, 1000 - 1}]
