@@ -1,0 +1,1 @@
+IntegerDigits /@ Range[1000] // Flatten // Tally
