@@ -1,0 +1,4 @@
+Select[PowersRepresentations[#, 2, 2] & /@ 
+    Select[Range[10^14, 10^14 + 10^6], 
+     PrimeQ[#] && Mod[#, 4] == 1 &] // Flatten, 
+  PrimeQ] // {Length[#], Total[#]} &
