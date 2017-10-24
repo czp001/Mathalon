@@ -1,9 +1,9 @@
-# At first,use Mathematica to get 10^7 digits of Pi,and save in pi.txt,takes 33 secs
+''' At first,use Mathematica to get 10^7 digits of Pi,and save in pi.txt,takes 33 secs
 Export["pi.txt", 
  StringJoin[
   ToString /@ (RealDigits[\[Pi], 10, 10^7 + 1] // First // 
      Drop[#, 1] &)]]
-     
+'''     
 #Than use manacher algorithms,takes 3 secs
 
 import os
