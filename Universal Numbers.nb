@@ -1,0 +1,5 @@
+a = ContinuedFraction[
+    ToExpression[
+     "0." ~~ StringJoin[ToString /@ Table[2 n, {n, 20000}]]], 
+    150][[115]];
+{IntegerDigits[a] // Length, Mod[a, 10^50]}
